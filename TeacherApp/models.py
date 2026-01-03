@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class herotext(models.Model):
@@ -14,7 +15,7 @@ class herotext(models.Model):
 class contentcolumn(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='content/')
+    image = CloudinaryField("image", blank = True, null = True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -22,7 +23,7 @@ class contentcolumn(models.Model):
 
 class Certification(models.Model):
     description = models.TextField()
-    image = models.ImageField(upload_to='certifications/')
+    image = CloudinaryField("image", blank = True, null = True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -30,7 +31,7 @@ class Certification(models.Model):
 class contentbody(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='contentbody/')
+    image = CloudinaryField("image", blank = True, null = True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -48,7 +49,7 @@ class ContactMessage(models.Model):
 class footer(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='footer/')
+    image = CloudinaryField("image", blank = True, null = True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -65,7 +66,7 @@ class comparison(models.Model):
 class whyus(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    images = models.ImageField(upload_to='whyus/')
+    image = CloudinaryField("image", blank = True, null = True)
     is_active = models.BooleanField(default=True)
     def __str__(self):
         return self.title

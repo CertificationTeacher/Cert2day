@@ -37,7 +37,7 @@ class footerAdmin(admin.ModelAdmin):
     list_display = ('title','description','image', 'is_active')
 @admin.register(whyus)
 class whyusadmin(admin.ModelAdmin):
-    list_display = ('title','description','images', 'is_active')
+    list_display = ('title','description','image', 'is_active')
 
 @admin.register(comparison)
 class comparisonadmin(admin.ModelAdmin):

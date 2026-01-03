@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     "cloudinary",
     "cloudinary_storage",
     'TeacherApp',
-]+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+]
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

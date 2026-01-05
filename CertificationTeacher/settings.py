@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
-
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -140,10 +142,11 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # for production (collectstatic)
 
-CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": os.getenv("cert"),
-    "API_KEY": os.getenv("732842341545788"),
-    "API_SECRET": os.getenv("x9AlZBu2PUzy3XvHnIACBAHXUOE"),
-}
+
+
+
+cloudinary.config(
+    cloudinary_url=os.environ.get("CLOUDINARY_URL")
+)
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"

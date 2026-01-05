@@ -23,15 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f=bgao@+4ea-rabo-$15-d40r-s3+d4+)hoaj#6%1xt*2)(#fy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["*", "cert2day.com", "www.cert2day.com"]
+ALLOWED_HOSTS = [
+    "cert2day.onrender.com",
+    "cert2day.com",
+    "www.cert2day.com",
+]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://certificationdon.com",
-    "https://www.certificationdon.com",
-    "http://certificationdon.com",
-    "http://www.certificationdon.com",
+    "https://cert2day.com",
+    "https://www.cert2day.com",
 ]
 
 

@@ -31,3 +31,8 @@ def home(request):
 
     return render(request, 'index.html',context)
 
+import os
+from django.http import HttpResponse
+
+def test_env(request):
+    return HttpResponse(os.environ.get("CLOUDINARY_URL", "NOT FOUND"))

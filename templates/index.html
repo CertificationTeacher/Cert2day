@@ -47,7 +47,9 @@
       <div class="container">
         <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
           {% for f in foot %}
+          {% if f.image %}
           <img src="{{ f.image.url }}" alt="Logo" width="190" class="me-2">
+          {% endif%}
           {% endfor %}
 
         </a>
@@ -107,7 +109,9 @@
         {% for c in content %}
         <div class="col-lg-6 mb-4 mb-lg-0">
           <div class="image-wrapper">
+           {% if c.image %}
             <img src="{{ c.image.url }}" alt="Student preparing for exam" class="img-fluid main-image">
+            {% endif %}
 
             <!-- Decorative Circles -->
             <span class="circle circle-1"></span>
@@ -152,7 +156,9 @@
         {% for cert in Certificate %}
         <div class="col-lg-4 col-md-6">
           <div class="cert-card">
+            {% if cert.image %}
             <img src="{{ cert.image.url }}" alt="PMI" class="cert-logo">
+            {% endif %}
             <p class="cert-desc">
               {{ cert.description }}
             </p>
@@ -235,7 +241,9 @@
         <!-- RIGHT IMAGE -->
         <div class="col-lg-6 text-center">
           <div class="image-wrapper">
+              {% if b.image %}
             <img src="{{ b.image.url }}" class="img-fluid main-image" alt="Student">
+            {% endif %}
 
             <span class="circle circle-top"></span>
             <span class="circle circle-bottom"></span>
@@ -252,14 +260,18 @@
 
         {% for cert in Certificate %}
         <div class="logo-item">
+          {% if cert.image %}
           <img src="{{ cert.image.url }}" width="190" alt="{{ cert.title }}">
+          {% endif %}
         </div>
         {% endfor %}
 
         <!-- 🔁 DUPLICATE SAME LOGOS -->
         {% for cert in Certificate %}
         <div class="logo-item">
+          {% if cert.image %}
           <img src="{{ cert.image.url }}" alt="{{ cert.title }}">
+          {% endif %}
         </div>
         {% endfor %}
 
@@ -294,7 +306,9 @@
         <div class="col-lg-6">
           <div class="why-card">
             <div class="icon-circle">
+              {% if w.image %}
               <img src="{{ w.images.url }}" alt="">
+              {% endif %}
             </div>
             <h5>{{ w.title }}</h5>
             <p>
@@ -406,7 +420,9 @@
         {% for f in foot %}
         <div class="footer-brand">
           <div class="footer-logo-box">
+            {% if f.image %}
             <img src="{{ f.image.url }}" alt="Certification Teacher" size>
+            {% endif %}
           </div>
 
           <p class="footer-desc">

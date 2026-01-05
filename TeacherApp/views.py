@@ -35,4 +35,5 @@ import os
 from django.http import HttpResponse
 
 def test_env(request):
-    return HttpResponse(os.environ.get("CLOUDINARY_URL", "NOT FOUND"))
+    value = os.environ.get("CLOUDINARY_URL")
+    return HttpResponse(value or "NOT FOUND")

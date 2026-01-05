@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='whyus',
-            name='images',
+            name='image',
             field=cloudinary.models.CloudinaryField(max_length=255, verbose_name='image'),
         ),
     ]

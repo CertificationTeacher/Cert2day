@@ -37,7 +37,9 @@ CSRF_TRUSTED_ORIGINS = [
     "https://cert2day.com",
     "https://www.cert2day.com",
 ]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
+SECURE_SSL_REDIRECT = False 
 
 
 # Application definition

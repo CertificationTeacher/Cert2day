@@ -707,7 +707,7 @@ body {
 /* Main layout like screenshot */
 .footer-grid {
   display: grid;
-  grid-template-columns: 2.2fr 1fr 1fr; /* big left area + 2 small columns */
+  grid-template-columns: 1fr 1fr 1fr; /* big left area + 2 small columns */
   gap: 60px;
   align-items: start;
 }
@@ -721,7 +721,6 @@ body {
 
 /* White logo box */
 .footer-logo-box {
-  background: #ffffff;
   padding: 14px 18px;
   border-radius: 10px;
   flex: 0 0 auto;
@@ -769,7 +768,16 @@ body {
 .footer-links a:hover {
   text-decoration: underline;
 }
+.footer-rights {
+  text-align: center;
+  margin-top: 20px;
+  color: #060607;
+  font-size: 12px;
+}
 
+.footer-rights p {
+  margin: 0;
+}
 /* Payment icons */
 .payment-icons {
   display: grid;

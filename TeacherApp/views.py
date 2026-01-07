@@ -7,6 +7,7 @@ def home(request):
     Certificate= Certification.objects.filter(is_active=True)
     body = contentbody.objects.filter(is_active=True)
     foot = footer.objects.filter(is_active=True)
+    head = footer.objects.filter(is_active=False)
     comp = comparison.objects.filter(is_active=True)
     why = whyus.objects.filter(is_active=True)
     whytitle = whyus.objects.filter(is_active=False)

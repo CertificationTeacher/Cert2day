@@ -25,6 +25,7 @@ def home(request):
         'Certificate':Certificate,
         'body':body,
         'foot':foot,
+        'head':head,
         'comp':comp,
         'why':why,
         'whytitle':whytitle
